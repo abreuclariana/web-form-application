@@ -63,9 +63,8 @@ function App() {
   return (
     <div className="container">
       <h1>
-        Preencha o formulário {contact.fName} {contact.lName}
+        Preencha o formulário 
       </h1>
-      <p>{contact.email}</p>
 
       <form onSubmit={handleSubmit}>
         <div>
