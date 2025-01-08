@@ -9,8 +9,6 @@ Salvamento dos dados no Local Storage e carregamento automático quando o formul
 Mensagens dinâmicas para erros e sucesso.
 5. Reset do formulário
 Função para limpar todos os campos e remover os dados do Local Storage.
-📷 Screenshot
-(Adicione aqui uma captura de tela da aplicação rodando)
 
 🤝 Contribuições
 Sinta-se à vontade para contribuir com melhorias ou sugerir novas funcionalidades! 🚀
