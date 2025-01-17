@@ -1,17 +1,62 @@
-📌 Funcionalidades principais
-1. Estados para validação e envio
-Uso de useState para gerenciar erros (errors) e status de envio (isSubmitted).
-2. Validação dos campos
-Verifica se todos os campos obrigatórios foram preenchidos e se o e-mail está no formato correto.
-3. Persistência de dados
-Salvamento dos dados no Local Storage e carregamento automático quando o formulário é reaberto.
-4. Feedback ao usuário
-Mensagens dinâmicas para erros e sucesso.
-5. Reset do formulário
-Função para limpar todos os campos e remover os dados do Local Storage.
+📝 Sistema de Cadastro e Login - Formulário Inteligente
+Um projeto que explora a criação de um sistema de cadastro e login interativo e funcional usando React. Este sistema foi projetado para ser robusto, intuitivo e proporcionar uma excelente experiência para o usuário. 🚀
 
-🤝 Contribuições
-Sinta-se à vontade para contribuir com melhorias ou sugerir novas funcionalidades! 🚀
+📋 Funcionalidades
+Estados para Erros e Envio do Formulário
+Utilização de useState para monitorar erros de validação e verificar quando o formulário é enviado com sucesso.
 
-📝 Licença
-Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+Recuperar Dados do Local Storage
+Ao carregar a página, a aplicação verifica e carrega automaticamente os dados previamente salvos no Local Storage, garantindo a persistência das informações.
+
+Validação dos Inputs
+Implementação de validações como:
+
+Campos obrigatórios.
+Verificação do formato de e-mail para assegurar a consistência dos dados.
+Envio do Formulário
+Armazenamento dos dados no Local Storage após validação e exibição de mensagens de feedback ao usuário.
+
+Limpeza do Formulário
+Função para resetar campos, erros e dados armazenados no Local Storage, permitindo um reinício completo.
+
+Mensagens de Erro
+Feedback visual exibido diretamente abaixo dos campos com erros, ajudando os usuários a corrigir problemas rapidamente.
+
+🛠️ Tecnologias Utilizadas
+React: Biblioteca principal para construção da interface.
+JavaScript (ES6+): Lógica de validação e manipulação de estados.
+CSS3: Estilização e feedback visual.
+Local Storage: Persistência de dados no navegador.
+🚀 Como Executar o Projeto
+Clone o repositório:
+
+bash
+Copiar
+Editar
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+Instale as dependências:
+
+bash
+Copiar
+Editar
+npm install
+Inicie o servidor de desenvolvimento:
+
+bash
+Copiar
+Editar
+npm start
+Acesse no navegador:
+O projeto estará disponível em http://localhost:3000.
+
+📚 Aprendizados
+Durante o desenvolvimento deste projeto, aprendi e aprofundei os seguintes conceitos:
+
+Gerenciamento de estado no React com useState.
+Manipulação do Local Storage para garantir persistência de dados.
+Implementação de validações personalizadas para inputs de formulário.
+Criação de feedback visual intuitivo para o usuário.
+Boas práticas de design e experiência do usuário (UX).
+📄 Licença
+Este projeto está sob a licença MIT.
