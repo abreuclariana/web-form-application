@@ -30,19 +30,22 @@ Local Storage: Persistência de dados no navegador.
 
 ## 🚀 Como Executar o Projeto
 
-1. **Clone o repositório**:
-```bash
+1. **Clone o repositório**:  
+   ```bash
    git clone https://github.com/abreuclariana/web-form-application
-   cd seu-repositorio
+   cd web-form-application
 
 2.**Instale as dependências**:
-   
-npm install
+ 
+    npm install
 
 3. **Inicie o servidor de desenvolvimento**:
-
-4. **Acesse no navegador**:
-O projeto estará disponível em http://localhost:3000.
+   
+       npm start
+   
+5. **Acesse no navegador**:
+   
+       O projeto estará disponível em http://localhost:3000.
 
 📚 Aprendizados
 Durante o desenvolvimento deste projeto, aprendi e aprofundei os seguintes conceitos:
