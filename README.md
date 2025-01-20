@@ -27,26 +27,19 @@ React: Biblioteca principal para construção da interface.
 JavaScript (ES6+): Lógica de validação e manipulação de estados.
 CSS3: Estilização e feedback visual.
 Local Storage: Persistência de dados no navegador.
-🚀 Como Executar o Projeto
-Clone o repositório:
 
-bash
-Copiar
-Editar
-git clone https://github.com/abreuclariana/web-form-application
-cd seu-repositorio
+## 🚀 Como Executar o Projeto
+
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/abreuclariana/web-form-application
+   cd seu-repositorio
+
 Instale as dependências:
-
-bash
-Copiar
-Editar
 npm install
+
 Inicie o servidor de desenvolvimento:
 
-bash
-Copiar
-Editar
-npm start
 Acesse no navegador:
 O projeto estará disponível em http://localhost:3000.
 
