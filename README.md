@@ -35,7 +35,7 @@ Local Storage: Persistência de dados no navegador.
        git clone https://github.com/abreuclariana/web-form-application
        cd web-form-application
 
-2.**Instale as dependências**:
+2. **Instale as dependências**:
  
        npm install
 
@@ -55,5 +55,7 @@ Manipulação do Local Storage para garantir persistência de dados.
 Implementação de validações personalizadas para inputs de formulário.
 Criação de feedback visual intuitivo para o usuário.
 Boas práticas de design e experiência do usuário (UX).
+
 📄 Licença
+
 Este projeto está sob a licença MIT.
