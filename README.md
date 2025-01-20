@@ -32,12 +32,12 @@ Local Storage: Persistência de dados no navegador.
 
 1. **Clone o repositório**:  
    ```bash
-   git clone https://github.com/abreuclariana/web-form-application
-   cd web-form-application
+       git clone https://github.com/abreuclariana/web-form-application
+       cd web-form-application
 
 2.**Instale as dependências**:
  
-    npm install
+       npm install
 
 3. **Inicie o servidor de desenvolvimento**:
    
