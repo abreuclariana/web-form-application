@@ -51,9 +51,13 @@ Local Storage: Persistência de dados no navegador.
 Durante o desenvolvimento deste projeto, aprendi e aprofundei os seguintes conceitos:
 
 Gerenciamento de estado no React com useState.
+
 Manipulação do Local Storage para garantir persistência de dados.
+
 Implementação de validações personalizadas para inputs de formulário.
+
 Criação de feedback visual intuitivo para o usuário.
+
 Boas práticas de design e experiência do usuário (UX).
 
 📄 Licença
