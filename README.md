@@ -1,65 +1,58 @@
-📝 Sistema de Cadastro e Login - Formulário Inteligente
-Um projeto que explora a criação de um sistema de cadastro e login interativo e funcional usando React. Este sistema foi projetado para ser robusto, intuitivo e proporcionar uma excelente experiência para o usuário. 🚀
+# 🎉 Formulário de Contato Simples com Validação e Armazenamento Local 🚀
 
-📋 Funcionalidades
-Estados para Erros e Envio do Formulário
-Utilização de useState para monitorar erros de validação e verificar quando o formulário é enviado com sucesso.
+Se você está procurando um jeito prático de coletar dados de um formulário com validação de e-mail e armazenamento local, você chegou no lugar certo! 😎
 
-Recuperar Dados do Local Storage
-Ao carregar a página, a aplicação verifica e carrega automaticamente os dados previamente salvos no Local Storage, garantindo a persistência das informações.
+Este é um pequeno e simpático aplicativo em **React** onde você pode preencher seu nome, sobrenome e e-mail. Além disso, ele vai validar se os campos estão corretos e, claro, armazenar suas informações de forma segura no **Local Storage** para que você não perca nenhum dado! 🙌
 
-Validação dos Inputs
-Implementação de validações como:
+## 🔥 Funcionalidades Incríveis
 
-Campos obrigatórios.
-Verificação do formato de e-mail para assegurar a consistência dos dados.
-Envio do Formulário
-Armazenamento dos dados no Local Storage após validação e exibição de mensagens de feedback ao usuário.
+### 💾 Armazenamento Local:
+Os dados inseridos ficam guardadinhos no **Local Storage**. Isso significa que, mesmo se você recarregar a página, as informações continuam lá. Que prático, né? 😜
 
-Limpeza do Formulário
-Função para resetar campos, erros e dados armazenados no Local Storage, permitindo um reinício completo.
+### ⚠️ Validação de Dados:
+Não queremos e-mails errados ou campos vazios! Este formulário valida se:
+- **Nome** e **Sobrenome** estão preenchidos.
+- **E-mail** tem um formato bonitinho e correto (sem erros!).
 
-Mensagens de Erro
-Feedback visual exibido diretamente abaixo dos campos com erros, ajudando os usuários a corrigir problemas rapidamente.
+### ✨ Mensagens de Erro:
+Quando um dado não é válido, uma mensagem de erro aparece para te dar aquele toque, tipo: "Ei, preenche isso aí, por favor!" 😅
 
-🛠️ Tecnologias Utilizadas
-React: Biblioteca principal para construção da interface.
-JavaScript (ES6+): Lógica de validação e manipulação de estados.
-CSS3: Estilização e feedback visual.
-Local Storage: Persistência de dados no navegador.
+### 🧼 Limpeza do Formulário:
+Mudou de ideia? Não tem problema! Você pode limpar tudo a qualquer momento e começar de novo, sem estresse. 😌
 
-## 🚀 Como Executar o Projeto
+## 👩‍💻 Como Funciona o Código
 
-1. **Clone o repositório**:  
+### Estado do Componente
+O estado está organizadinho com três variáveis principais:
+- **contact**: Guarda os dados do formulário (nome, sobrenome e e-mail).
+- **errors**: Fica de olho nos erros de validação e os exibe quando necessário.
+- **isSubmitted**: Nos avisa se o formulário foi enviado com sucesso. 🎉
+
+### `useEffect` Mágico ✨
+Quando a página carrega, o aplicativo dá uma olhadinha no **Local Storage** e, se tiver dados lá, já preenche o formulário automaticamente! Mais rápido que um super-herói. 🦸‍♂️
+
+### Validação Simples, mas Poderosa 💪
+A função `validateInputs` vai validar os seguintes critérios:
+1. **Nome** (fName): Não pode ficar vazio.
+2. **Sobrenome** (lName): Não pode ficar vazio.
+3. **E-mail** (email): Tem que ser um e-mail válido, tipo `meuemail@dominio.com`.
+
+### Envio do Formulário 🚀
+Quando você clicar em "Enviar", ele vai:
+1. Verificar se os dados estão ok.
+2. Salvar tudo no **Local Storage**.
+3. Mostrar uma mensagem de sucesso.
+4. Resetar o formulário depois de 3 segundos. (Porque a gente gosta de ser organizado!) ⏳
+
+### Limpeza de Dados 💥
+Quer começar de novo? O botão "Limpar" vai tirar todos os dados e erros do formulário e apagar tudo do **Local Storage**. Zero! 💯
+
+## 🛠 Como Rodar o Projeto
+
+Siga esses passos para ver o formulário em ação:
+
+1. Clone o repositório:
    ```bash
-       git clone https://github.com/abreuclariana/web-form-application
-       cd web-form-application
+   git clone https://github.com/seu-usuario/formulario-contato.git
 
-2. **Instale as dependências**:
- 
-       npm install
 
-3. **Inicie o servidor de desenvolvimento**:
-   
-       npm start
-   
-5. **Acesse no navegador**:
-   
-       O projeto estará disponível em http://localhost:3000.
-
-📚 Aprendizados
-Durante o desenvolvimento deste projeto, aprendi e aprofundei os seguintes conceitos:
-
-Gerenciamento de estado no React com useState.
-
-Manipulação do Local Storage para garantir persistência de dados.
-
-Implementação de validações personalizadas para inputs de formulário.
-
-Criação de feedback visual intuitivo para o usuário.
-
-Boas práticas de design e experiência do usuário (UX).
-
-📄 Licença
-
-Este projeto está sob a licença MIT.
