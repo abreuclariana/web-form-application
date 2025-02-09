@@ -16,17 +16,14 @@ function App() {
     if (savedContact) setContact(savedContact);
   }, []);
 
-  // Função para lidar com mudanças nos inputs
   function handleChange(event) {
     const { name, value } = event.target;
-
     setContact((prevValue) => ({
       ...prevValue,
       [name]: value,
     }));
   }
 
-  // Validação dos inputs
   function validateInputs() {
     const newErrors = {};
     if (!contact.fName) newErrors.fName = "O nome é obrigatório.";
@@ -35,73 +32,57 @@ function App() {
       newErrors.email = "E-mail inválido.";
     }
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0; // Retorna true se não houver erros
+    return Object.keys(newErrors).length === 0;
   }
 
-  // Função para enviar o formulário
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     if (validateInputs()) {
-      localStorage.setItem("contact", JSON.stringify(contact)); // Salva os dados no Local Storage
-      setIsSubmitted(true); // Marca como enviado
-      setTimeout(() => setIsSubmitted(false), 3000); // Reseta o estado após 3 segundos
-      alert("Formulário enviado com sucesso!");
+      localStorage.setItem("contact", JSON.stringify(contact));
+      setIsSubmitted(true);
+      setTimeout(() => setIsSubmitted(false), 3000);
+      
+      try {
+        const response = await fetch("http://localhost:5000/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(contact),
+        });
+        const data = await response.json();
+        console.log("Servidor respondeu:", data);
+      } catch (error) {
+        console.error("Erro ao enviar dados para o backend:", error);
+      }
     }
   }
 
-  // Função para limpar o formulário
   function handleReset() {
-    setContact({
-      fName: "",
-      lName: "",
-      email: "",
-    });
+    setContact({ fName: "", lName: "", email: "" });
     setErrors({});
-    localStorage.removeItem("contact"); // Remove os dados salvos
+    localStorage.removeItem("contact");
   }
 
   return (
     <div className="container">
-      <h1>
-        Preencha o formulário 
-      </h1>
-
+      <h1>Preencha o formulário</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <input
-            onChange={handleChange}
-            value={contact.fName}
-            name="fName"
-            placeholder="Nome"
-          />
+          <input onChange={handleChange} value={contact.fName} name="fName" placeholder="Nome" />
           {errors.fName && <small style={{ color: "red" }}>{errors.fName}</small>}
         </div>
         <div>
-          <input
-            onChange={handleChange}
-            value={contact.lName}
-            name="lName"
-            placeholder="Sobrenome"
-          />
+          <input onChange={handleChange} value={contact.lName} name="lName" placeholder="Sobrenome" />
           {errors.lName && <small style={{ color: "red" }}>{errors.lName}</small>}
         </div>
         <div>
-          <input
-            onChange={handleChange}
-            value={contact.email}
-            name="email"
-            placeholder="E-mail"
-          />
+          <input onChange={handleChange} value={contact.email} name="email" placeholder="E-mail" />
           {errors.email && <small style={{ color: "red" }}>{errors.email}</small>}
         </div>
         <button type="submit">{isSubmitted ? "Enviado!" : "Enviar"}</button>
-        <button type="button" onClick={handleReset}>
-          Limpar
-        </button>
+        <button type="button" onClick={handleReset}>Limpar</button>
       </form>
     </div>
   );
 }
 
 export default App;
-
