@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# 🎉 Formulário de Contato Simples com Validação e Armazenamento Local 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Se você está procurando um jeito prático de coletar dados de um formulário com validação de e-mail e armazenamento local, você chegou no lugar certo! 😎
 
-## Available Scripts
+Este é um pequeno e simpático aplicativo em **React** onde você pode preencher seu nome, sobrenome e e-mail. Além disso, ele vai validar se os campos estão corretos e, claro, armazenar suas informações de forma segura no **Local Storage** para que você não perca nenhum dado! 🙌
 
-In the project directory, you can run:
+## 🔥 Funcionalidades Incríveis
 
-### `npm start`
+### 💾 Armazenamento Local:
+Os dados inseridos ficam guardadinhos no **Local Storage**. Isso significa que, mesmo se você recarregar a página, as informações continuam lá. Que prático, né? 😜
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### ⚠️ Validação de Dados:
+Não queremos e-mails errados ou campos vazios! Este formulário valida se:
+- **Nome** e **Sobrenome** estão preenchidos.
+- **E-mail** tem um formato bonitinho e correto (sem erros!).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### ✨ Mensagens de Erro:
+Quando um dado não é válido, uma mensagem de erro aparece para te dar aquele toque, tipo: "Ei, preenche isso aí, por favor!" 😅
 
-### `npm test`
+### 🧼 Limpeza do Formulário:
+Mudou de ideia? Não tem problema! Você pode limpar tudo a qualquer momento e começar de novo, sem estresse. 😌
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 👩‍💻 Como Funciona o Código
 
-### `npm run build`
+### Estado do Componente
+O estado está organizadinho com três variáveis principais:
+- **contact**: Guarda os dados do formulário (nome, sobrenome e e-mail).
+- **errors**: Fica de olho nos erros de validação e os exibe quando necessário.
+- **isSubmitted**: Nos avisa se o formulário foi enviado com sucesso. 🎉
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `useEffect` Mágico ✨
+Quando a página carrega, o aplicativo dá uma olhadinha no **Local Storage** e, se tiver dados lá, já preenche o formulário automaticamente! Mais rápido que um super-herói. 🦸‍♂️
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Validação Simples, mas Poderosa 💪
+A função `validateInputs` vai validar os seguintes critérios:
+1. **Nome** (fName): Não pode ficar vazio.
+2. **Sobrenome** (lName): Não pode ficar vazio.
+3. **E-mail** (email): Tem que ser um e-mail válido, tipo `meuemail@dominio.com`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Envio do Formulário 🚀
+Quando você clicar em "Enviar", ele vai:
+1. Verificar se os dados estão ok.
+2. Salvar tudo no **Local Storage**.
+3. Mostrar uma mensagem de sucesso.
+4. Resetar o formulário depois de 3 segundos. (Porque a gente gosta de ser organizado!) ⏳
 
-### `npm run eject`
+### Limpeza de Dados 💥
+Quer começar de novo? O botão "Limpar" vai tirar todos os dados e erros do formulário e apagar tudo do **Local Storage**. Zero! 💯
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🛠 Como Rodar o Projeto
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Siga esses passos para ver o formulário em ação:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/formulario-contato.git
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
